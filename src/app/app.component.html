@@ -1,0 +1,33 @@
+<form [formGroup]="group">
+  <p>
+    <label>
+      Name:
+      <input formControlName="name">
+    </label>
+  </p>
+  <p>
+    <label>
+      Means of contact:
+      <select 
+        [ngModelOptions]="{standalone: true}"
+        [(ngModel)]="type"
+      >
+        <option>Email</option>  
+        <option>Phone</option>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label>
+      Contact:
+      <input
+        formControlName="contact"
+        [validator]="validator"
+      >   
+    </label>
+  </p>
+</form>
+<hr>
+<p>
+  {{validation$ | async}}
+</p>

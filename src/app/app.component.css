@@ -1,0 +1,19 @@
+p {
+  font-family: Lato;
+}
+
+input,
+select {
+  display: block;
+  border-radius: 4px;
+  width: 200px;
+  height: 32px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  padding: 0 12px;
+  border: 1px solid grey
+}
+
+.ng-touched.ng-invalid {
+  border-color: red;
+}
